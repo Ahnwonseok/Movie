@@ -1,1 +1,1 @@
-web: gunicorn prj3:app
+web:gunicorn prj3:app
