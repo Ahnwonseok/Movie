@@ -41,11 +41,18 @@
       }
 
       .col-md-8{
-        width: 550px;
+        width: 500px;
         height: 1000px;
         font-size: 1.5em;
         padding-top: 50px;
-        margin-left: 75px;
+        margin-right: 75px;
+      }
+      .col-md-9{
+        width: 500px;
+        height: 1000px;
+        font-size: 1.5em;
+        padding-top: 50px;
+        margin-left: 20px;
       }
       .blog-post-title2{
         text-align: center;
@@ -129,12 +136,12 @@
         <div class="col-md-7 col-lg-8">
   
           <form action = "http://localhost:5000/result" method = "POST">
-            <h5><p>감독<br> <input type = "text" class="form-control" name = "영화이름" /></p></h5>
+            <h5><p>영화이름<br> <input type = "text" class="form-control" name = "영화이름" /></p></h5>
             <h5><p>감독<br> <input type = "text" class="form-control" name = "감독" /></p></h5>
             <h5><p>제작사<br> <input type = "text" class="form-control" name = "제작사" /></p></h5>
             <h5><p>수입사<br> <input type = "text" class="form-control" name = "수입사" /></p></h5>
             <h5><p>배급사<br> <input type ="text" class="form-control" name = "배급사" /></p></h5>
-            <h5><p>개봉일<br> <input type = "text" class="form-control" name = "개봉일" /></p></h5>
+            <h5><p>개봉하는 달<br> <input type = "text" class="form-control" name = "개봉일" /></p></h5>
             <h5><p>국적<br> <input type = "text" class="form-control" name = "국적" /></p></h5>
             <h5><p>스크린수<br> <input type = "text" class="form-control" name = "스크린수" /></p></h5>
             <h5><p>장르<br> <input type ="text" class="form-control" name = "장르" /></p></h5> 
@@ -146,7 +153,7 @@
       </article>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-md-9">
       <h1 class="blog-post-title2">국내역대 흥행순위(Top10)</h1>
         <table class="table">
           <thead>
