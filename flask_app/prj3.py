@@ -2,14 +2,13 @@ from flask import Flask, render_template, request
 import pandas as pd
 import pickle
 
+with open("model.pkl","rb") as fr:
+   boosting = pickle.load(fr)
+with open("encoder.pkl","rb") as fr:
+   encoder = pickle.load(fr)
+
 def create_app():
       
-   with open("model.pkl","rb") as fr:
-      boosting = pickle.load(fr)
-   with open("encoder.pkl","rb") as fr:
-      encoder = pickle.load(fr)
-
-
    app = Flask(__name__)
 
    @app.route('/')
