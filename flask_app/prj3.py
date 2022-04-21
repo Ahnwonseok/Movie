@@ -11,7 +11,7 @@ with open("encoder.pkl","rb") as fr:
 app = Flask(__name__)
 
 @app.route('/')
-def student():
+def home():
    return render_template('blog.html')
 
 @app.route('/result',methods = ['POST', 'GET'])
