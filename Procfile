@@ -1,1 +1,1 @@
-web: gunicorn prj3:app
+web: gunicorn --workers=2 'flask_app:prj3.py'
