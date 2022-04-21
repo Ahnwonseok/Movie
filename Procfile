@@ -1,2 +1,1 @@
-web: gunicorn --workers=2 
-worker: python prj3.py
+web: gunicorn prj3:app
