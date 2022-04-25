@@ -9,9 +9,9 @@ with open("encoder.pkl","rb") as fr:
 
 app = Flask(__name__)
 
-# @app.route('/')
-# def home():
-#    return render_template('blog.html')
+@app.route('/measure')
+def home():
+   return render_template('blog.html')
 
 @app.route('/result',methods = ['GET','POST'])
 def result():
