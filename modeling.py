@@ -34,7 +34,7 @@ movie2["관객수"]=movie2["관객수"].apply(lambda x : int(x.replace(",", ""))
 movie2["스크린수"]=movie2["스크린수"].apply(lambda x : int(x.replace(",", ""))) 
 #달만 넣기
 movie2["개봉일"]=movie2["개봉일"].apply(lambda x : int(str(x).replace("-", "")[4:6])) 
-movie2=movie2.drop(['스크린수'], axis=1)
+
 #훈련,테스트 세트 나누기
 from sklearn.model_selection import train_test_split
 
@@ -108,6 +108,18 @@ mae = mean_absolute_error(y_test, y_pred)
 print(f' MAE: {mae}')
 print(f' r2: {r2}')
 
+student_card = pd.DataFrame({'감독':['김한민'],
+                             '제작사':['(주)제이케이필름'],
+                             '수입사':['None'],
+                             '배급사':['CJ ENM'],
+                             '개봉일':[7],
+                             '국적':['한국'],
+                             '스크린수':[1900],
+                             '장르':['액션'],
+                             '등급':['청소년관람불가']})
+X_tests_encoded = encoder.transform(student_card) 
+
+print(boosting.predict(X_tests_encoded))
 # ###부호화
 with open('model.pkl','wb') as pickle_file:
     pickle.dump(boosting, pickle_file)
