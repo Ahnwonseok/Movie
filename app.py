@@ -9,15 +9,12 @@ with open("encoder.pkl","rb") as fr:
 
 app = Flask(__name__)
 
-@app.route('/measure')
+@app.route('/')
 def home():
    return render_template('blog.html')
 
 @app.route('/result',methods = ['GET','POST'])
 def result():
-
-   if request.method == 'GET':  
-      return render_template('blog.html')
 
    if request.method == 'POST':
       result = request.form
