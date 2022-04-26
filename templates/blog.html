@@ -59,6 +59,9 @@
         padding-left: 50px;
         padding-bottom: 20px;
       }
+      .blog-footer{
+        margin-top: 100px;
+      }
     </style>
 
     
@@ -136,16 +139,21 @@
         <div class="col-md-7 col-lg-8">
   
           <form action = "/result" method = "POST">
-            <h5><p>영화이름<br> <input type = "text" class="form-control" name = "영화이름" /></p></h5>
+            <h5><p>영화이름<br><input type = "text" class="form-control" name = "영화이름" /></p></h5>
             <h5><p>감독<br> <input type = "text" class="form-control" name = "감독" /></p></h5>
             <h5><p>제작사<br> <input type = "text" class="form-control" name = "제작사" /></p></h5>
             <h5><p>수입사<br> <input type = "text" class="form-control" name = "수입사" /></p></h5>
             <h5><p>배급사<br> <input type ="text" class="form-control" name = "배급사" /></p></h5>
             <h5><p>개봉하는 달<br> <input type = "text" class="form-control" name = "개봉일" /></p></h5>
-            <h5><p>국적<br> <input type = "text" class="form-control" name = "국적" /></p></h5>
-            <h5><p>스크린수<br> <input type = "text" class="form-control" name = "스크린수" /></p></h5>
-            <h5><p>장르<br> <input type ="text" class="form-control" name = "장르" /></p></h5> 
-            <h5><p>등급<br> <input type ="text" class="form-control" name = "등급" /></p></h5>          
+            <h5><div title="'한국', '미국', '일본', '영국', '프랑스'..."><p>국적<br></div>
+              <input type = "text" class="form-control" name = "국적" /></p></h5>
+            <h5><div title="'백종원"><p>스크린수<br></div> <input type = "text" class="form-control" name = "스크린수" /></p></h5>
+            <h5><div title="'사극', '코미디', '판타지', '드라마', '액션', '애니메이션', '어드벤처', 'SF', '범죄', '전쟁',
+              '미스터리', '멜로/로맨스', '스릴러', '다큐멘터리', '공포(호러)', '뮤지컬', '가족', '공연',
+              '기타', '서부극(웨스턴)'"><p>장르<br></div> 
+              <input type ="text" class="form-control" name = "장르" /></p></h5> 
+            <h5><div title="'15세이상관람가', '12세이상관람가', '전체관람가', '청소년관람불가'"><p>등급<br></div> 
+              <input type ="text" class="form-control" name = "등급" /></p></h5>          
             <!-- <p><input type = "submit" class="form-control" value = "submit" /></p> -->
             <button input type="submit" class="btn btn-secondary">확인하기</button>
          </form>
